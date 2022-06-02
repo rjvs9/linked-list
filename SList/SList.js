@@ -119,6 +119,10 @@ export default class SList {
       prevB = currentB;
       currentB = currentB.next;
     }
+
+    if (currentA == null || currentB == null) {
+      return this;
+    }
     if (!prevA) {
       this.head = currentB;
     } else {
