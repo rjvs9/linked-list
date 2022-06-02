@@ -100,4 +100,38 @@ export default class SList {
     }
     return this;
   }
+
+  swapNodes(a, b) {
+    if (a === b) {
+      return this;
+    }
+
+    let currentA = this.head;
+    let prevA = null;
+    while (currentA && currentA.data !== a) {
+      prevA = currentA;
+      currentA = currentA.next;
+    }
+
+    let currentB = this.head;
+    let prevB = null;
+    while (currentB && currentB.data !== b) {
+      prevB = currentB;
+      currentB = currentB.next;
+    }
+    if (!prevA) {
+      this.head = currentB;
+    } else {
+      prevA.next = currentB;
+    }
+    if (!prevB) {
+      this.head = currentA;
+    } else {
+      prevB.next = currentA;
+    }
+
+    let temp = currentB;
+    currentB.next = currentA;
+    currentA.next = temp;
+  }
 }
