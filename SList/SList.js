@@ -73,6 +73,20 @@ export default class SList {
     }
   }
 
+  findNth(index) {
+    let counter = 0;
+    let current = this.head;
+    while (current) {
+      if (counter === index) {
+        return current;
+      } else {
+        current = current.next;
+        counter++;
+      }
+    }
+    return null;
+  }
+
   delete(value) {
     if (!this.head) {
       return this;

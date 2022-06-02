@@ -8,12 +8,11 @@ const sList = new SList();
 
 sList.append(node1);
 sList.append(33);
-sList.append(44);
-sList.prepend(-11);
-sList.prepend(-22);
+// sList.append(44);
+// sList.prepend(-11);
+// sList.prepend(-22);
 
 console.log('Initial Values: ', sList.toArray());
 // console.log(sList, sList.length);
-sList.swapNodes(-11, 33);
 
-console.log('====> Final List', sList.toArray());
+console.log('====> Final List', sList.findNth(0));
