@@ -72,4 +72,32 @@ export default class SList {
       }
     }
   }
+
+  delete(value) {
+    if (!this.head) {
+      return this;
+    }
+    if (!this.head.next) {
+      this.head = null;
+      return this;
+    }
+    let current = this.head;
+    let prev = null;
+
+    while (current) {
+      let next = current.next;
+      if (current.data === value) {
+        if (!prev) {
+          this.head = next;
+          current.next = null;
+        } else {
+          prev.next = next;
+          current.next = null;
+        }
+      }
+      prev = current;
+      current = next;
+    }
+    return this;
+  }
 }
