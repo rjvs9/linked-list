@@ -116,6 +116,11 @@ export default class SList {
   }
 
   swapNodes(a, b) {
+    // basically you have to awap four links
+    // two previous.next to the new destination : other curent node
+    // two current.next to the new destination : other current.next node
+    // previous nodes can be null. If that's the case then move head's pointer to other curent node
+
     if (a === b) {
       return this;
     }
