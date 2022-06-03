@@ -148,8 +148,8 @@ export default class SList {
       prevB.next = currentA;
     }
 
-    let temp = currentB;
-    currentB.next = currentA;
-    currentA.next = temp;
+    let temp = currentA.next;
+    currentA.next = currentB;
+    currentB.next = temp;
   }
 }
