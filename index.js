@@ -6,7 +6,7 @@ const node2 = new Node(2);
 const node3 = new Node(3);
 const node4 = new Node(4);
 const node5 = new Node(5);
-node5.next = node1;
+// node5.next = node1;
 const sList = new SList();
 
 // sList.prepend(22);

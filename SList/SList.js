@@ -213,6 +213,8 @@ export default class SList {
     return false;
   }
 
+  removeNthFromLast(index) {}
+
   static removeDuplicateFromUnsorted(listHead) {}
 
   static removeDuplicateFromSorted(listhead) {}
