@@ -157,4 +157,14 @@ export default class SList {
     currentA.next = currentB.next;
     currentB.next = temp;
   }
+
+  moveToFront(value) {}
+
+  movetoBack(value) {}
+
+  detectLoop() {}
+
+  static removeDuplicateFromUnsorted(listHead) {}
+
+  static removeDuplicateFromSorted(listhead) {}
 }
