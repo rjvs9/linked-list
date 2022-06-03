@@ -200,7 +200,18 @@ export default class SList {
     }
   }
 
-  detectLoop() {}
+  detectLoop() {
+    let slow = this.head;
+    let fast = this.head.next;
+    while (slow && fast && fast.next) {
+      if (slow.data === fast.data) {
+        return true;
+      }
+      slow = slow.next;
+      fast = fast.next.next;
+    }
+    return false;
+  }
 
   static removeDuplicateFromUnsorted(listHead) {}
 
