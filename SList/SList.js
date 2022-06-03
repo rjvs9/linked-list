@@ -158,9 +158,47 @@ export default class SList {
     currentB.next = temp;
   }
 
-  moveToFront(value) {}
+  moveToFront(value) {
+    let current = this.head;
+    let prev = null;
+    while (current) {
+      if (current.data === value && prev) {
+        prev.next = current.next;
+        current.next = this.head;
+        this.head = current;
+        return this;
+      }
+      prev = current;
+      current = current.next;
+    }
+  }
 
-  movetoBack(value) {}
+  movetoBack(value) {
+    let current = this.head;
+    let prev = null;
+    let temp = null;
+    while (current) {
+      if (current.data === value) {
+        if (!current.next) {
+          return this;
+        }
+        if (!prev) {
+          this.head = current.next;
+          temp = current;
+        } else {
+          prev.next = current.next;
+          temp = current;
+        }
+      }
+      if (current.next === null) {
+        current.next = temp;
+        temp.next = null;
+        return this;
+      }
+      prev = current;
+      current = current.next;
+    }
+  }
 
   detectLoop() {}
 

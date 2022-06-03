@@ -14,6 +14,6 @@ sList.prepend(-22);
 
 console.log('Initial Values: ', sList.toArray());
 // console.log(sList, sList.length);
-sList.swapNodes(33, -11);
-
+sList.moveToFront(0);
+sList.movetoBack(-22);
 console.log('====> Final List', sList.toArray());
