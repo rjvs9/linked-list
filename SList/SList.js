@@ -149,7 +149,7 @@ export default class SList {
     }
 
     let temp = currentA.next;
-    currentA.next = currentB;
+    currentA.next = currentB.next;
     currentB.next = temp;
   }
 }
